@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.PasswordField?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.discordfx.client.controllers.LoginController">
+    <VBox fx:id="basePanel" maxWidth="600" alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+          stylesheets="@../../../css/login.css">
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        </padding>
+
+        <Label text="Welcome back to CupCord !" styleClass="welcome-text"/>
+
+        <TextField styleClass="base-input" fx:id="emailField" promptText="Email address or phone number"/>
+
+        <PasswordField styleClass="base-input" fx:id="passwordField" promptText="Password"/>
+
+        <Button styleClass="primary-button" text="Login" onAction="#onFormSubmit"/>
+    </VBox>
+
+    <VBox fx:id="totpPanel" visible="false" managed="false">
+        <Label
+                styleClass="welcome-text"
+                text="Enter the 6-digit code from your authenticator app"
+        />
+
+        <TextField styleClass="base-input" fx:id="totpCode" promptText="Code"/>
+
+        <Button styleClass="primary-button" text="Send the code"/>
+    </VBox>
+</StackPane>

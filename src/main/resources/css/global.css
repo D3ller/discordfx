@@ -1,0 +1,20 @@
+.root {
+    -fx-background-color: #313338;
+}
+
+.text-xl {
+    -fx-font-size: 24px;
+}
+
+.primary-button {
+    -fx-padding: 10px 20px;
+    -fx-background-color: #5765F2;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.base-input {
+    -fx-background-color: #202024;
+    -fx-text-fill: white;
+    -fx-padding: 10px 12px;
+}
